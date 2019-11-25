@@ -11,6 +11,7 @@ Plug 'airblade/vim-gitgutter'
 
 call plug#end()
 
+set number
 set relativenumber
 set updatetime=250
 set noshowmode
