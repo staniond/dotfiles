@@ -9,6 +9,8 @@ Plug 'machakann/vim-highlightedyank'
 Plug 'morhetz/gruvbox'
 Plug 'airblade/vim-gitgutter'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } "see deoplete github for dependencies needed to install
+Plug 'Shougo/neoinclude.vim'
+Plug 'Shougo/deoplete-clangx'
 Plug 'deoplete-plugins/deoplete-jedi'
 Plug 'tell-k/vim-autopep8'
 Plug 'dense-analysis/ale'
@@ -18,6 +20,11 @@ call plug#end()
 "deoplete
 let g:deoplete#enable_at_startup = 1
 autocmd InsertLeave * silent! pclose!
+"let g:clang_library_path = '/usr/lib/x86_64-linux-gnu' "dont know if this is needed, seems to be working without it?
+
+"ale
+let g:ale_c_clang_options = '-Wall -pedantic -std=c11'
+let g:ale_c_gcc_options = '-Wall -pedantic -std=c11'
 
 "theme
 colorscheme gruvbox
