@@ -1,4 +1,4 @@
-"vim-plug
+"vim-plug - needs installation first
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'vim-airline/vim-airline'
@@ -10,6 +10,8 @@ Plug 'morhetz/gruvbox'
 Plug 'airblade/vim-gitgutter'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } "see deoplete github for dependencies needed to install
 Plug 'deoplete-plugins/deoplete-jedi'
+Plug 'tell-k/vim-autopep8'
+Plug 'dense-analysis/ale'
 
 call plug#end()
 
@@ -20,6 +22,9 @@ autocmd InsertLeave * silent! pclose!
 "theme
 colorscheme gruvbox
 set background=dark
+
+"autopep8
+autocmd FileType python noremap <buffer> <F8> :call Autopep8()<CR>
 
 "vanilla nvim
 set number
