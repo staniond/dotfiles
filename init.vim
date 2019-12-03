@@ -24,7 +24,9 @@ autocmd InsertLeave * silent! pclose!
 
 "ale
 let g:ale_c_clang_options = '-Wall -pedantic -std=c11'
+let g:ale_cpp_clang_options = '-Wall -pedantic -std=c++17'
 let g:ale_c_gcc_options = '-Wall -pedantic -std=c11'
+let g:ale_cpp_gcc_options = '-Wall -pedantic -std=c++17'
 
 "theme
 colorscheme gruvbox
