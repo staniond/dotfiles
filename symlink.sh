@@ -7,3 +7,4 @@ path=$(cd `dirname $0` && pwd) # gets absolute path to the directory this script
 ln -s "$path"/.vimrc ~/.vimrc
 ln -s "$path"/init.vim ~/.config/nvim/init.vim
 
+cat "$path"/custom_bashrc >> ~/.bashrc
