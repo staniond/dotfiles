@@ -11,6 +11,7 @@ cg++ () {
         echo "executing: " g++ -Wall -pedantic -std=c++17 -o "$OUTPUT.out" "$INPUT"    
     
         g++ -Wall -pedantic -std=c++17 -o "$OUTPUT.out" "$INPUT"       
+	return
 }    
     
 cgcc () {    
@@ -20,4 +21,5 @@ cgcc () {
         echo "executing: " gcc -Wall -pedantic -std=c11 -o "$OUTPUT.out" "$INPUT"    
     
         gcc -Wall -pedantic -std=c11 -o "$OUTPUT.out" "$INPUT"    
+	return
 } 
