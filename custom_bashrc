@@ -9,7 +9,6 @@ cg++ () {
         OUTPUT="${INPUT%%.*}"    
     
         echo "executing: " g++ -Wall -pedantic -std=c++17 -o "$OUTPUT.out" "$INPUT"    
-        echo    
     
         g++ -Wall -pedantic -std=c++17 -o "$OUTPUT.out" "$INPUT"       
 }    
@@ -19,7 +18,6 @@ cgcc () {
         OUTPUT="${INPUT%%.*}"    
       
         echo "executing: " gcc -Wall -pedantic -std=c11 -o "$OUTPUT.out" "$INPUT"    
-        echo    
     
         gcc -Wall -pedantic -std=c11 -o "$OUTPUT.out" "$INPUT"    
 } 
