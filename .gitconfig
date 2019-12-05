@@ -1,0 +1,7 @@
+[credential]
+	helper = store
+[user]
+	name = standa
+	email = ondra.stanicek@gmail.com
+[core]
+	editor = nvim
