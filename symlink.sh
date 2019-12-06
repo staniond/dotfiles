@@ -1,6 +1,6 @@
 #!/bin/bash
 mv ~/.vimrc ~/.vimrc.backup
-mv ~/.bashrc ~/.bashrc.backup
+cp ~/.bashrc ~/.bashrc.backup
 mv ~/.gitconfig ~/.gitconfig.backup
 mv ~/.config/nvim/init.vim ~/.config/nvim/init.vim.backup
 
