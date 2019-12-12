@@ -40,6 +40,10 @@ set number
 set relativenumber
 set updatetime=250 "gitgutter update
 set noshowmode
+set expandtab
+set autoindent
+set smartindent
+set shiftwidth=4
 syntax on
 filetype plugin on
 
