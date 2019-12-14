@@ -12,15 +12,14 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } "see deoplete gith
 Plug 'Shougo/neoinclude.vim'
 Plug 'Shougo/deoplete-clangx'
 Plug 'deoplete-plugins/deoplete-jedi'
-Plug 'tell-k/vim-autopep8'
-Plug 'dense-analysis/ale'
+Plug 'tell-k/vim-autopep8' "autopep8 needed 
+Plug 'dense-analysis/ale' "clang for c, flake8 and pylint for python needed
 
 call plug#end()
 
 "deoplete
 let g:deoplete#enable_at_startup = 1
 autocmd InsertLeave * silent! pclose!
-"let g:clang_library_path = '/usr/lib/x86_64-linux-gnu' "dont know if this is needed, seems to be working without it?
 
 "ale
 let g:ale_c_clang_options = '-Wall -pedantic -std=c11'
