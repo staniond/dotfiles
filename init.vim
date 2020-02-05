@@ -16,6 +16,7 @@ Plug 'deoplete-plugins/deoplete-jedi'
 Plug 'tell-k/vim-autopep8' "autopep8 needed 
 Plug 'dense-analysis/ale' "clang for c, flake8 and pylint for python needed
 Plug 'tpope/vim-surround'
+Plug 'sheerun/vim-polyglot'
 
 call plug#end()
 
