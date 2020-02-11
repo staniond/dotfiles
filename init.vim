@@ -1,3 +1,5 @@
+let g:ale_completion_enabled = 1
+
 "vim-plug - needs installation first
 call plug#begin('~/.local/share/nvim/plugged')
 
