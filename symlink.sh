@@ -24,12 +24,13 @@ echo
 
 if cat ~/.bashrc | fgrep -q DOTFILES_TAG;
 then
-    echo '~/.bashrc already contains custom_bashrc contents'
+    echo '~/.bashrc already sources custom_bashrc contents'
 else
     echo 'custom_bashrc not yet in ~/.bashrc, backing up to ~/.bashrc.backup'
     cp ~/.bashrc ~/.bashrc.backup
-    echo 'copying contents of custom_bashrc to ~/.bashrc'
-    cat "$path"/custom_bashrc >> ~/.bashrc
+    echo adding source "$path"/custom_bashrc to '~/.bashrc'
+    echo '# DOTFILES_TAG' >> ~/.bashrc
+    echo source "$path"/custom_bashrc >> ~/.bashrc
 fi
 
 echo
@@ -40,5 +41,15 @@ then
 else
     echo 'installing vimplug'
     curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+fi
+
+echo
+
+if [ -d ~/.bash-git-prompt ]
+then
+    echo 'bash-git-prompt already installed'
+else
+    echo 'installing bash-git-prompt'
+    git clone https://github.com/magicmonty/bash-git-prompt.git ~/.bash-git-prompt --depth=1
 fi
 
