@@ -37,6 +37,9 @@ let g:ale_cpp_gcc_options = '-Wall -pedantic -std=c++17'
 colorscheme gruvbox
 set background=dark
 
+"tmuxline/airline
+let g:airline#extensions#tmuxline#enabled = 0
+
 "autopep8
 autocmd FileType python noremap <buffer> <F8> :call Autopep8()<CR>
 
