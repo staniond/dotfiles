@@ -43,6 +43,9 @@ let g:airline#extensions#tmuxline#enabled = 0
 "autopep8
 autocmd FileType python noremap <buffer> <F8> :call Autopep8()<CR>
 
+"nerdtree
+map <C-n> :NERDTreeToggle<CR>
+
 "vanilla nvim
 set number
 set relativenumber
