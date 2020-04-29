@@ -13,6 +13,7 @@ backup_and_link() {
 
 backup_and_link ~/.vimrc .vimrc
 echo
+mkdir -p ~/.config/nvim
 backup_and_link ~/.config/nvim/init.vim init.vim
 echo
 backup_and_link ~/.gitconfig .gitconfig
