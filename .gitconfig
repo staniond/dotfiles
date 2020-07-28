@@ -5,3 +5,5 @@
 	email = ondra.stanicek@gmail.com
 [core]
 	editor = nvim
+[alias]
+        ll = log --oneline --graph
