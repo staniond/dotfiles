@@ -20,6 +20,7 @@ Plug 'dense-analysis/ale' "clang for c, flake8 and pylint for python needed
 Plug 'tpope/vim-surround'
 Plug 'sheerun/vim-polyglot'
 Plug 'edkolev/tmuxline.vim'
+Plug 'vhda/verilog_systemverilog.vim'
 
 call plug#end()
 
