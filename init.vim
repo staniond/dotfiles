@@ -58,4 +58,5 @@ set smartindent
 set shiftwidth=4
 syntax on
 filetype plugin on
+set mouse=a "neovim in tmux mouse click through
 
