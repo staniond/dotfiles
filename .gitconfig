@@ -7,3 +7,5 @@
 	editor = nvim
 [alias]
         ll = log --oneline --graph
+[pull]
+	ff = only
