@@ -1,8 +1,8 @@
 [credential]
 	helper = store
 [user]
-	name = standa
-	email = ondra.stanicek@gmail.com
+	name = Ondřej Staníček
+	email = staniond@fit.cvut.cz
 [core]
 	editor = nvim
 [alias]

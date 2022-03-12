@@ -15,12 +15,14 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } "see deoplete gith
 Plug 'Shougo/neoinclude.vim'
 Plug 'Shougo/deoplete-clangx'
 Plug 'deoplete-plugins/deoplete-jedi'
+Plug 'davidhalter/jedi-vim'
 Plug 'tell-k/vim-autopep8' "autopep8 needed 
 Plug 'dense-analysis/ale' "clang for c, flake8 and pylint for python needed
 Plug 'tpope/vim-surround'
 Plug 'sheerun/vim-polyglot'
 Plug 'edkolev/tmuxline.vim'
 Plug 'vhda/verilog_systemverilog.vim'
+Plug 'lervag/vimtex'
 
 call plug#end()
 
@@ -47,6 +49,12 @@ autocmd FileType python noremap <buffer> <F8> :call Autopep8()<CR>
 "nerdtree
 map <C-n> :NERDTreeToggle<CR>
 
+"vimtex
+filetype plugin indent on
+syntax enable
+" Disable custom warnings based on regexp
+let g:vimtex_quickfix_ignore_filters = ['is deprecated in favour of']
+
 "vanilla nvim
 set number
 set relativenumber
@@ -59,4 +67,7 @@ set shiftwidth=4
 syntax on
 filetype plugin on
 set mouse=a "neovim in tmux mouse click through
+nnoremap <expr> k (v:count == 0 ? 'gk' : 'k')
+nnoremap <expr> j (v:count == 0 ? 'gj' : 'j')
+
 
