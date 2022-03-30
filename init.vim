@@ -69,5 +69,9 @@ filetype plugin on
 set mouse=a "neovim in tmux mouse click through
 nnoremap <expr> k (v:count == 0 ? 'gk' : 'k')
 nnoremap <expr> j (v:count == 0 ? 'gj' : 'j')
+set spelllang=en
+set spellsuggest=best,9
+nnoremap <silent> <F10> :set spell!<cr>
+inoremap <silent> <F10> <C-O>:set spell!<cr>
 
 
