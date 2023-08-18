@@ -58,3 +58,5 @@ echo
 echo 'Installing powerline-shell'
 pip3 install powerline-shell
 
+echo 'Installing jedi'
+pip3 install jedi
