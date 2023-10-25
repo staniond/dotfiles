@@ -7,5 +7,6 @@
 	editor = nvim
 [alias]
         ll = log --oneline --graph
+        sdiff = diff --submodule=diff
 [pull]
 	ff = only
