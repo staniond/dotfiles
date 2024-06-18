@@ -46,17 +46,9 @@ fi
 
 echo
 
-# using powerline instead of bash-git-prompt
-#if [ -d ~/.bash-git-prompt ]
-#then
-    #echo 'bash-git-prompt already installed'
-#else
-    #echo 'installing bash-git-prompt'
-    #git clone https://github.com/magicmonty/bash-git-prompt.git ~/.bash-git-prompt --depth=1
-#fi
 
-echo 'Installing powerline-shell'
-pip3 install powerline-shell
+echo 'Installing starship'
+curl -sS https://starship.rs/install.sh | sh
 
 echo 'Installing jedi'
 pip3 install jedi
