@@ -49,6 +49,7 @@ echo
 
 echo 'Installing starship'
 curl -sS https://starship.rs/install.sh | sh
+starship preset gruvbox-rainbow -o ~/.config/starship.toml
 
 echo 'Installing jedi'
 pip3 install jedi
