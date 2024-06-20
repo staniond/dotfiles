@@ -22,6 +22,8 @@ backup_and_link ~/.tmuxline .tmuxline
 echo
 backup_and_link ~/.tmux.conf .tmux.conf
 echo
+backup_and_link ~/.config/starship.toml starship.toml
+echo
 
 if cat ~/.bashrc | fgrep -q DOTFILES_TAG;
 then
@@ -49,7 +51,6 @@ echo
 
 echo 'Installing starship'
 curl -sS https://starship.rs/install.sh | sh
-starship preset gruvbox-rainbow -o ~/.config/starship.toml
 
 echo 'Installing jedi'
 pip3 install jedi
