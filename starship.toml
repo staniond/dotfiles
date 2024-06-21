@@ -185,7 +185,7 @@ format = '[[  $time ](fg:color_fg0 bg:color_bg1)]($style)'
 
 [cmd_duration]
 disabled = false
-min_time = 500
+min_time = 2_000
 format = '[[  $duration ](fg:color_fg0 bg:color_bg1)]($style)'
 
 [line_break]
