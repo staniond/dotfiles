@@ -78,7 +78,8 @@ format = '[ $user ]($style)'
 
 [hostname]
 ssh_only = true
-format = '[ 󰌘](bg:color_orange fg:color_fg0)'
+ssh_symbol = '󰌘 '
+format = '[ \[${ssh_symbol}${hostname}\] as](bg:color_orange fg:color_fg0)'
 
 [directory]
 style = "fg:color_fg0 bg:color_yellow"
