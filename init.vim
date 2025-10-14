@@ -73,5 +73,5 @@ set spelllang=en
 set spellsuggest=best,9
 nnoremap <silent> <F10> :set spell!<cr>
 inoremap <silent> <F10> <C-O>:set spell!<cr>
-
+set clipboard+=unnamedplus  "yank to system clipboard
 
