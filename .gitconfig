@@ -8,5 +8,6 @@
 [alias]
         ll = log --oneline --graph
         sdiff = diff --submodule=diff
+        forcepush = push --force-with-lease
 [pull]
 	ff = only
