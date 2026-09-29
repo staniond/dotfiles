@@ -7,6 +7,12 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "collaboration_panel": {
+    "button": false
+  },
+  "title_bar": {
+    "show_sign_in": false
+  },
   "ssh_connections": [
     {
       "host": "terminal3",
@@ -38,7 +44,7 @@
   ],
   "project_panel": {
     "git_status_indicator": true,
-    "bold_folder_labels": true,
+    "bold_folder_labels": false,
     "dock": "left"
   },
   "icon_theme": {

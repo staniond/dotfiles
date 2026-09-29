@@ -1,5 +1,4 @@
-#custom content    
-#DOTFILES_TAG
+# Stowed to ~/.bash_aliases, which the stock Debian/Ubuntu ~/.bashrc sources automatically.
 
 eval "$(starship init bash)"
 
