@@ -1,0 +1,84 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "ssh_connections": [
+    {
+      "host": "terminal3",
+      "args": [],
+      "projects": [
+        {
+          "paths": [
+            "/projects/tropic01/work/ostanicek/tassic-system-verification/./"
+          ]
+        },
+        {
+          "paths": [
+            "/projects/tropic01/work/ostanicek/tassic-validation"
+          ]
+        }
+      ]
+    },
+    {
+      "host": "lab01",
+      "args": [],
+      "projects": [
+        {
+          "paths": [
+            "/projects/tropic01/work/ostanicek/tassic-validation"
+          ]
+        }
+      ]
+    }
+  ],
+  "project_panel": {
+    "git_status_indicator": true,
+    "bold_folder_labels": true,
+    "dock": "left"
+  },
+  "icon_theme": {
+    "mode": "system",
+    "light": "Zed (Default)",
+    "dark": "Material Icon Theme"
+  },
+  "proxy": "",
+  "disable_ai": true,
+  "vim_mode": true,
+  "terminal": {
+    "font_size": 18.0
+  },
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "relative_line_numbers": "enabled",
+  "sticky_scroll": {
+    "enabled": false
+  },
+  "gutter": {
+    "line_numbers": true
+  },
+  "minimap": {
+    "show": "always"
+  },
+  "autosave": {
+    "after_delay": {
+      "milliseconds": 1000
+    }
+  },
+  "buffer_font_family": "JetBrains Mono",
+  "show_whitespaces": "none",
+  "base_keymap": "VSCode",
+  "ui_font_size": 16,
+  "buffer_font_size": 16.0,
+  "theme": {
+    "mode": "system",
+    "light": "Gruvbox Light",
+    "dark": "VSCode Dark Modern",
+  },
+}

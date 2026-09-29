@@ -24,6 +24,11 @@ backup_and_link ~/.tmux.conf .tmux.conf
 echo
 backup_and_link ~/.config/starship.toml starship.toml
 echo
+mkdir -p ~/.config/zed
+backup_and_link ~/.config/zed/settings.json zed/settings.json
+echo
+backup_and_link ~/.config/zed/keymap.json zed/keymap.json
+echo
 
 if cat ~/.bashrc | fgrep -q DOTFILES_TAG;
 then
