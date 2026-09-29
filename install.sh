@@ -123,7 +123,9 @@ clear_conflicts() {
         target="$HOME/$rel"
 
         if [ -L "$target" ]; then
-            link="$(readlink -f "$target")"
+            # -m, not -f: a stale link may point at a path that no longer
+            # exists, and -f fails there, aborting the script under `set -e`.
+            link="$(readlink -m "$target")"
             case "$link" in
                 "$DOTFILES_DIR"/*)
                     echo "  unlinking $target"
