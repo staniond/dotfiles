@@ -7,6 +7,19 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "edit_predictions": {
+    "provider": "none",
+    "allow_data_collection": "no"
+  },
+  "agent": {
+    "dock": "right",
+    "button": true,
+    "expand_edit_card": true,
+    "sidebar_side": "right",
+    "favorite_models": [],
+    "model_parameters": [],
+    "terminal_init_command": "claude"
+  },
   "git_panel": {
     "show_count_badge": false,
     "collapse_untracked_diff": false,
@@ -94,9 +107,11 @@
     "dark": "Material Icon Theme"
   },
   "proxy": "",
-  "disable_ai": true,
+  "disable_ai": false,
   "vim_mode": true,
   "terminal": {
+    "button": true,
+    "font_family": "JetBrainsMono Nerd Font",
     "font_size": 18.0
   },
   "telemetry": {
