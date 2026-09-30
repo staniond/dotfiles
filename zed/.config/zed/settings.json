@@ -7,10 +7,48 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "git_panel": {
+    "show_count_badge": false,
+    "collapse_untracked_diff": false,
+    "file_icons": true,
+    "tree_view": false,
+    "starts_open": true
+  },
+  "outline_panel": {
+    "git_status": true
+  },
+  "window_decorations": "client",
+  "use_system_window_tabs": false,
+  "bottom_dock_layout": "contained",
+  "tab_bar": {
+    "show_pinned_tabs_in_separate_row": false,
+    "show_nav_history_buttons": true
+  },
+  "tabs": {
+    "git_status": false,
+    "file_icons": true
+  },
+  "status_bar": {
+    "show_active_file": false,
+    "line_endings_button": true
+  },
+  "colorize_brackets": true,
+  "middle_click_paste": false,
+  "show_signature_help_after_edits": true,
+  "auto_signature_help": true,
+  "cursor_animation": {
+    
+  },
+  "git": {
+    "diff_base": "head"
+  },
   "collaboration_panel": {
     "button": false
   },
   "title_bar": {
+    "show_menus": false,
+    "show_branch_name": true,
+    "show_branch_status_icon": false,
     "show_sign_in": false
   },
   "ssh_connections": [
@@ -43,6 +81,9 @@
     }
   ],
   "project_panel": {
+    "hide_root": false,
+    "diagnostic_badges": true,
+    "file_icons": true,
     "git_status_indicator": true,
     "bold_folder_labels": false,
     "dock": "left"
@@ -70,6 +111,9 @@
     "line_numbers": true
   },
   "minimap": {
+    "thumb_border": "left_open",
+    "thumb": "always",
+    "display_in": "active_editor",
     "show": "always"
   },
   "autosave": {
@@ -78,10 +122,10 @@
     }
   },
   "buffer_font_family": "JetBrains Mono",
-  "show_whitespaces": "none",
+  "show_whitespaces": "trailing",
   "base_keymap": "VSCode",
-  "ui_font_size": 16,
-  "buffer_font_size": 16.0,
+  "ui_font_size": 17.0,
+  "buffer_font_size": 17.0,
   "theme": {
     "mode": "system",
     "light": "Gruvbox Light",
