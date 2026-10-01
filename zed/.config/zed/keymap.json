@@ -13,6 +13,14 @@
     },
   },
   {
+    // Move by display (wrapped) lines, like `gj` / `gk`
+    "context": "VimControl && !menu",
+    "bindings": {
+      "j": ["vim::Down", { "display_lines": true }],
+      "k": ["vim::Up", { "display_lines": true }],
+    },
+  },
+  {
     "context": "Editor && vim_mode == insert",
     "bindings": {
       // "j k": "vim::NormalBefore"
