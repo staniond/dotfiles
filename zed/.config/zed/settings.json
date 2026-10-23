@@ -7,15 +7,18 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "diff_view_style": "unified",
   "edit_predictions": {
     "provider": "none",
     "allow_data_collection": "no"
   },
   "agent": {
+    "threads_sidebar": {
+      "position": "right"
+    },
     "dock": "right",
     "button": true,
     "expand_edit_card": true,
-    "sidebar_side": "right",
     "favorite_models": [],
     "model_parameters": [],
     "terminal_init_command": "claude"
