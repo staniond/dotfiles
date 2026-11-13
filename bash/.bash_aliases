@@ -9,6 +9,6 @@ alias mount_fit='mount.cifs   //drive.fit.cvut.cz/home/staniond   /mnt/fit   -o 
 alias bat='batcat --paging=never'
 
 alias claude='sudo -H -u claude-user firejail --profile=/etc/firejail/claude.profile -- /home/claude-user/.local/bin/claude'
-alias claude-code='claude'
+alias claude-update='sudo -H -u claude-user /home/claude-user/.local/bin/claude update'
 alias claude-kill='sudo pkill -u claude-user'
 
