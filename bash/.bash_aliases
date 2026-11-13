@@ -7,3 +7,8 @@ alias ll='ls -alF'
 alias sudo='sudo '
 alias mount_fit='mount.cifs   //drive.fit.cvut.cz/home/staniond   /mnt/fit   -o sec=ntlmv2i,fsc,file_mode=0700,dir_mode=0700,uid=$UID,user=staniond'
 alias bat='batcat --paging=never'
+
+alias claude='sudo -H -u claude-user firejail --profile=/etc/firejail/claude.profile -- /home/claude-user/.local/bin/claude'
+alias claude-code='claude'
+alias claude-kill='sudo pkill -u claude-user'
+
