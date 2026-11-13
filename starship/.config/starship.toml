@@ -84,7 +84,7 @@ format = '[ \[${ssh_symbol}${hostname}\] as](bg:color_orange fg:color_fg0)'
 
 # Shown whenever the current directory is under /home/claude-user
 [custom.claude]
-when = 'case "$PWD" in /home/claude-user|/home/claude-user/*) exit 0 ;; *) exit 1 ;; esac'
+when = 'case "$(pwd -P)" in /home/claude-user|/home/claude-user/*) exit 0 ;; *) exit 1 ;; esac'
 shell = ['sh']
 symbol = '󰚩 '
 style = "bold bg:color_purple fg:color_fg0"
