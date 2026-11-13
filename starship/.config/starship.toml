@@ -5,7 +5,8 @@ format = """
 $os\
 $hostname\
 $username\
-[](bg:color_yellow fg:color_orange)\
+${custom.claude}\
+[](bg:color_yellow fg:prev_bg)\
 $directory\
 [](fg:color_yellow bg:color_aqua)\
 $git_branch\
@@ -80,6 +81,14 @@ format = '[ $user ]($style)'
 ssh_only = true
 ssh_symbol = '󰌘 '
 format = '[ \[${ssh_symbol}${hostname}\] as](bg:color_orange fg:color_fg0)'
+
+# Shown whenever the current directory is under /home/claude-user
+[custom.claude]
+when = 'case "$PWD" in /home/claude-user|/home/claude-user/*) exit 0 ;; *) exit 1 ;; esac'
+shell = ['sh']
+symbol = '󰚩 '
+style = "bold bg:color_purple fg:color_fg0"
+format = '[](fg:color_orange bg:color_purple)[ $symbol claude ]($style)'
 
 [directory]
 style = "fg:color_fg0 bg:color_yellow"
