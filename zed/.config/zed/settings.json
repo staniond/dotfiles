@@ -161,7 +161,7 @@
       "milliseconds": 1000
     }
   },
-  "buffer_font_family": "JetBrains Mono",
+  "buffer_font_family": "JetBrainsMono Nerd Font",
   "show_whitespaces": "trailing",
   "base_keymap": "VSCode",
   "ui_font_size": 17.0,
