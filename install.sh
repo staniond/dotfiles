@@ -23,24 +23,50 @@ info() { printf '\n==> %s\n' "$1"; }
 # Prerequisites
 # --------------------------------------------------------------------------
 
+PKG_MANAGER=''
+for pm in apt-get dnf pacman brew; do
+    if command -v "$pm" >/dev/null 2>&1; then
+        PKG_MANAGER="$pm"
+        break
+    fi
+done
+
+APT_UPDATED=0
+pkg_install() {
+    case "$PKG_MANAGER" in
+        apt-get)
+            if [ "$APT_UPDATED" = 0 ]; then
+                sudo apt-get update
+                APT_UPDATED=1
+            fi
+            sudo apt-get install -y "$@"
+            ;;
+        dnf)    sudo dnf install -y "$@" ;;
+        pacman) sudo pacman -S --needed --noconfirm "$@" ;;
+        brew)   brew install "$@" ;;
+        *)
+            echo "error: no known package manager, install manually: $*" >&2
+            exit 1
+            ;;
+    esac
+}
+
 install_stow() {
     if command -v stow >/dev/null 2>&1; then
         echo "GNU stow already installed: $(stow --version | head -n1)"
         return
     fi
     echo 'installing GNU stow'
-    if command -v apt-get >/dev/null 2>&1; then
-        sudo apt-get update && sudo apt-get install -y stow
-    elif command -v dnf >/dev/null 2>&1; then
-        sudo dnf install -y stow
-    elif command -v pacman >/dev/null 2>&1; then
-        sudo pacman -S --noconfirm stow
-    elif command -v brew >/dev/null 2>&1; then
-        brew install stow
-    else
-        echo 'error: no known package manager, install GNU stow manually' >&2
-        exit 1
+    pkg_install stow
+}
+
+install_curl() {
+    if command -v curl >/dev/null 2>&1; then
+        echo 'curl already installed'
+        return
     fi
+    echo 'installing curl'
+    pkg_install curl
 }
 
 install_starship() {
@@ -69,8 +95,16 @@ install_jedi() {
         return
     fi
     echo 'installing jedi'
-    # Newer distros ship an externally managed python, so fall back to --user.
-    pip3 install jedi || pip3 install --user jedi
+    # Newer distros ship an externally managed python (PEP 668) where pip
+    # refuses to install, so use the distro package wherever there is one.
+    case "$PKG_MANAGER" in
+        apt-get|dnf) pkg_install python3-jedi ;;
+        pacman)      pkg_install python-jedi ;;
+        *)
+            command -v pip3 >/dev/null 2>&1 || pkg_install python3
+            pip3 install --user jedi
+            ;;
+    esac
 }
 
 # --------------------------------------------------------------------------
@@ -150,6 +184,7 @@ run_stow() {
 # --------------------------------------------------------------------------
 
 info 'Installing GNU stow';  install_stow
+info 'Installing curl';      install_curl
 info 'Installing starship';  install_starship
 info 'Installing vim-plug';  install_vimplug
 info 'Installing jedi';      install_jedi
