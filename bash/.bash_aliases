@@ -2,6 +2,8 @@
 
 eval "$(starship init bash)"
 
+eval "$(fzf --bash)"
+
 export MAKEFLAGS=-j$(nproc)
 alias ll='ls -alF'
 alias sudo='sudo '

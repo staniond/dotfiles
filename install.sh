@@ -69,6 +69,15 @@ install_curl() {
     pkg_install curl
 }
 
+install_fzf() {
+    if command -v fzf >/dev/null 2>&1; then
+        echo "fzf already installed: $(fzf --version | head -n1)"
+        return
+    fi
+    echo 'installing fzf'
+    pkg_install fzf
+}
+
 install_starship() {
     if command -v starship >/dev/null 2>&1; then
         echo "starship already installed: $(starship --version | head -n1)"
@@ -185,6 +194,7 @@ run_stow() {
 
 info 'Installing GNU stow';  install_stow
 info 'Installing curl';      install_curl
+info 'Installing fzf';       install_fzf
 info 'Installing starship';  install_starship
 info 'Installing vim-plug';  install_vimplug
 info 'Installing jedi';      install_jedi
